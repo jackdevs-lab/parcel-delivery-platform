@@ -50,7 +50,6 @@ router.get('/my-parcels', authenticateToken, async (req, res) => {
   
   // Update parcel status (for delivery persons)
 router.put('/update-status/:id', authenticateToken, async (req, res) => {
-    console.log('PUT /api/parcels/update-status/:id called with ID:', req.params.id);
     try {
       const { status } = req.body;
       const parcelId = req.params.id;
